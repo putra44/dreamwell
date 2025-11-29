@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log update</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<button class="back-to-top">&#128285;</button>
+
+<script>
+  const btn = document.querySelector('.back-to-top');
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<body>
+    <div class="container2">
+        <div class="logo">
+            <img src="./image/LOG.png" alt="">
+        </div>
+        <div class="navbar">
+            <nav>
+            <a href="index.html">HOME</a>
+            <a href="#">PROJECT</a>
+            <a href="#">DRAFT</a>
+            <a href="#">ARCHIVE</a>
+            </nav>
+        </div>
+        <div class="content">
+            <h2 style="text-align: justify;">&#128270;Change Log</h2>
+            <p style="text-align: justify;">
+                &#128276; Versi v1.0.0
+                <p style="text-align: justify;">&#9745; Publishing to Vercel.</p>
+                <p style="text-align: justify;">&#9745; Add "Back to Top" button.</p>
+                <p style="text-align: justify;">&#9745; Add Music Collection.</p>
+                <p style="text-align: justify;">&#9745; Add Map Location.</p>
+                <p style="text-align: justify;">&#9745; Fixing Some Bug/Error.</p>
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copy">Copyright 2025. Developed by getdreamwell.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWELL!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/js/script.js"></script>
+</head>
+
+<button class="back-to-top">&#128285;</button>
+<script>
+  const btn = document.querySelector('.back-to-top');
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./image/LOGO.png" alt="">
+        </div>
+        <div class="navbar">
+            <nav>
+              <a href="about.html">ABOUT</a>
+              <a href="#">PROJECT</a>
+              <a href="#">DRAFT</a>
+              <a href="#">ARCHIVE</a>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>&#128295;Update..</h1>
+            <p style="text-align: justify;">
+                Halo! Terima kasih telah mengunjungi website ku. Berhubung karena website yang ku buat ini masih baru dan banyak yang harus diperbaiki & ditambahkan ke depannya, untuk
+                sekarang ini mungkin hanya sedikit konten yang tersedia. Jika teman-teman bersedia membantu dalam proses development web ini baik itu kritik, saran atau ide
+                kalian bisa berikan itu semua melalui <a href="https://github.com/putra44"
+                style="color: #fff;">Github</a> saya. Terima kasih! :)
+            </p>
+            <p style="text-align: justify;">&#128203; Lihat changelog terbaru di <a href="log.html" style="color: #fff;">sini</a>.
+            </p>
+            <img class="maintenance" src="./image/maintenace.gif" alt="">
+            <!--progres bar-->
+            <p>
+                &#128187; Progress Development: 40%
+            </p>
+            <div class="dev-progress-track">
+                <div class="dev-progress-bar" id="devBar"></div>
+            </div>
+            <h2>Lihat koleksi musik ku!</h2>
+            <p style="font-size: 30px;">&#128071; &#128071; &#128071;</p>
+            <a href="./music.html">
+                <img class="image3" src="./image/3.jpg" alt="">
+            </a>
+        </div>     
+    </div>
+        <div class="footer">
+            <p class="copy">2025. Created & Delevoped by getdreamwell.</p>
+        </div>
+
+    <!-- Pixel Moon -->
+<div class="pixel-moon"></div>
+
+<!-- Twinkling stars (posisi acak) -->
+<div class="pixel-star" style="top:10%; left:15%; animation-delay:.1s;"></div>
+<div class="pixel-star" style="top:25%; left:40%; animation-delay:.5s;"></div>
+<div class="pixel-star" style="top:50%; left:70%; animation-delay:1.2s;"></div>
+<div class="pixel-star" style="top:80%; left:20%; animation-delay:.9s;"></div>
+<div class="pixel-star" style="top:60%; left:85%; animation-delay:1.7s;"></div>
+
+<!-- Pixel sparks naik -->
+<div class="pixel-spark" style="left:30%; animation-delay: .4s;"></div>
+<div class="pixel-spark" style="left:55%; animation-delay: 1s;"></div>
+<div class="pixel-spark" style="left:75%; animation-delay: 1.6s;"></div>
+<div class="pixel-spark" style="left:15%; animation-delay: 2s;"></div>
+
+
+<script>
+// Generate bintang random
+function createStars(count) {
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement("div");
+    star.classList.add("pixel-star");
+
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.animationDelay = (Math.random() * 3) + "s";
+
+    document.body.appendChild(star);
+  }
+}
+createStars(100);
+
+// Generate sparks random arah & posisi
+function createRandomSparks(count) {
+  for (let i = 0; i < count; i++) {
+    const spark = document.createElement("div");
+    spark.classList.add("pixel-spark");
+
+    spark.style.top = Math.random() * 100 + "%";
+    spark.style.left = Math.random() * 100 + "%";
+
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 400 + Math.random() * 400;
+    spark.style.setProperty("--dx", Math.cos(angle) * distance + "px");
+    spark.style.setProperty("--dy", Math.sin(angle) * distance + "px");
+
+    spark.style.animationDuration = (2 + Math.random() * 4) + "s";
+    spark.style.animationDelay = Math.random() * 3 + "s";
+
+    document.body.appendChild(spark);
+  }
+}
+createRandomSparks(40);
+</script>
+
+<script>
+function updateDevProgress(percent) {
+  const bar = document.getElementById("devBar");
+  if (!bar) return;
+
+  const safe = Math.max(0, Math.min(100, percent)); // 0–100
+  bar.style.width = safe + "%";
+}
+
+// awal development
+updateDevProgress(40);
+</script>
+</body>
+</html>

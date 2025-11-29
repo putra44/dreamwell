@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    background: #00c3ff;
+    color: #000;
+    font-size: 30px;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.back-to-top:hover{
+    background: #00e1ff;
+    transform: scale(1.15);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #000;
+}
+
+/* Bintang pixel twinkle */
+.pixel-star {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: #00eaff;
+  image-rendering: pixelated;
+  opacity: 0.4;
+  box-shadow: 0 0 6px #00eaff;
+  animation: twinkle 2s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.8); }
+}
+
+/* Partikel cahaya pixel */
+.pixel-spark {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: #00c3ff;
+  opacity: 0.9;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 6px #00c3ff);
+  animation: sparkMove linear infinite;
+  z-index: -1;
+}
+
+/* Spark bisa ke arah mana saja */
+@keyframes sparkMove {
+  from {
+    transform: translate(0,0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx), var(--dy)) scale(1.6);
+    opacity: 0;
+  }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    max-width: 750px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(253, 175, 228);
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px auto;
+    max-width: 750px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 3px solid black;
+    background-color: rgb(253, 175, 228);
+}
+
+.logo img{
+    max-width: 350px;
+}
+
+img.maintenance{
+    max-width: 200px;
+}
+
+img.image3 {
+    max-width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/*Progres Dev*/
+.dev-progress-track {
+  width: 260px;
+  height: 14px;
+  margin: 20px auto;
+  background: #033b4f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px #00eaff, 0 0 15px #00eaff;
+}
+
+.dev-progress-bar {
+  height: 100%;
+  width: 40%; /* default */
+  background: #00eaff;
+  box-shadow: 0 0 12px #00eaff;
+  transition: width 0.5s ease-in-out;
+}
+/* Efek hover — saat kursor diarahkan ke gambar */
+img.image3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(107, 183, 254, 0.4);
+    filter: brightness(1.1);
+}
+
+/* Efek klik — saat gambar ditekan */
+img.image3:active {
+    transform: rotate(12deg) scale(1.08);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.5), 0 0 20px rgba(100,180,255,0.6);
+    filter: brightness(1.2);
+}
+
+img.musik{
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+audio{
+    margin-bottom: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content h2{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content p{
+    margin-top: 10px;
+    padding: 5px;
+    width: 500px;
+    margin-bottom: 15px;
+
+}
+
+.navbar nav a{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #00c3ff;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar nav a:hover{
+    color: aliceblue;
+}
+
+.footer{
+    margin-top: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer .copy {
+    text-align: center;
+    color: #fff;
+}
+
+
